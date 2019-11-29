@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Galeri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-list>
+  <ion-item *ngFor="let item of aracService.araclar" (click)="detayGoster(item.id)">
+    <ion-thumbnail slot="start">
+      <ion-img [src]="item.resim"></ion-img>
+    </ion-thumbnail>
+    <ion-label>{{item.ad}}</ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>

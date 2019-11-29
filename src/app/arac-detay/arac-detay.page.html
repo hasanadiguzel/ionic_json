@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" text='Geri'></ion-back-button>
+    <ion-title>{{seciliArac.ad}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="seciliArac.resim"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{ seciliArac.ad }}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let item of seciliArac.ozellik">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
